@@ -16,6 +16,19 @@ app.get('/dog', function(req, res) {
     res.send('MEOW!');
 });
 
+app.get('/r/:subredditName', function(req, res) {
+    res.send('Welcome to a Route Parameter page!');
+});
+
+app.get('/r/:username/comments/:id/:title', function(req, res) {
+    console.log(req.params);
+    res.send('Welcome to the Users comments page');
+});
+
+app.get('*', function(req, res) {
+    res.send('Page Not Found');
+});
+
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log('Server has started!!!');
 });

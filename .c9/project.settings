@@ -20,6 +20,9 @@
             }
         }
     },
+    "preview": {
+        "@url": ""
+    },
     "run": {
         "configs": {
             "@inited": "true",
